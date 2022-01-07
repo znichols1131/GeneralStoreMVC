@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace GeneralStore.MVC.Models
 {
-    public class Transaction /*: IValidatableObject*/
+    public class Transaction
     {
         [Key]
         public int TransactionID { get; set; }

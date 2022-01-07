@@ -45,6 +45,9 @@ namespace GeneralStore.MVC.Controllers
 
                     _db.SaveChanges();
                     return RedirectToAction("Index");
+                }else
+                {
+                    ModelState.AddModelError("ProductCount", "There is not enough inventory to fulfill this order.");
                 }
             }
 
@@ -129,6 +132,10 @@ namespace GeneralStore.MVC.Controllers
 
                     _db.SaveChanges();
                     return RedirectToAction("Index");
+                }
+                else
+                {
+                    ModelState.AddModelError("ProductCount", "There is not enough inventory to fulfill this order.");
                 }
             }
 

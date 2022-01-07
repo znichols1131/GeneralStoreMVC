@@ -44,7 +44,13 @@
             <td>
                 @Html.ActionLink("Change", "Edit", new { id = item.ProductId }) |
                 @Html.ActionLink("More Info", "Details", new { id = item.ProductId }) |
-                @Html.ActionLink("Remove", "Delete", new { id = item.ProductId })
+                @Html.ActionLink("Remove", "Delete", new { id = item.ProductId }) |
+                @Html.ActionLink(
+                    linkText: "Add to Cart",
+                    actionName: "CreateForProduct",
+                    controllerName: "CartItem",
+                    routeValues: new { productID = item.ProductId },
+                    htmlAttributes: null)
             </td>
         </tr>
     }
